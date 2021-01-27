@@ -1,0 +1,316 @@
+/* CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+                                        /* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+/* Navigation Bar: Logo and Image s */
+
+#logo{
+    margin: 10px 20px;
+    font-size: xx-large;
+    justify-content: center;
+    color: yellow;
+}
+#logo img{
+    height: 62px;
+    margin: 5px 5px;
+}
+
+/* navigation list */
+#navbar ul{
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#navbar ul li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+#navbar ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color:rgb(113, 223, 85);        
+    padding: 35px 15px;
+}
+#navbar ul li a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 254, 254);
+    border-radius: 20px;
+    transition-timing-function: ease-in;
+    animation: A1 600ms ease-in 1 forwards ;
+}
+
+
+                                    /* about Section */
+#About{
+    display: flex;
+    flex-direction: column;
+    padding:100px 200px;
+    height: 492px;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+#About img{
+    display: block;
+    height: 300px;
+    border-radius: 30px;
+    border: 2px solid black;
+    width: 400px;
+    margin: auto;
+}
+
+                                    /*  Hobbies Section */
+#Hobbies{
+    background-color: antiquewhite;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding:100px 100px;
+    /* height: 492px; */
+    justify-content: center;
+    align-items: center;
+}
+#Hobbies img{
+    display: block;
+    border: 2px solid black;
+    width: 220px;
+}
+#Hobbies ul{
+    padding :25px;
+}
+#Hobbies ul li{
+    padding: 5px 10px;
+}
+
+                                /* Skills section */
+#Skills{
+    display: flex;
+    flex-direction: column;
+    padding:88px 200px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(242, 231, 247) ;
+}
+#Skills img{
+    display: block;
+    border: 2px solid black;
+    width: 250px;
+    margin: auto;
+}
+#Skills ul{
+    padding: 25px;
+}
+#Skills ul li{
+    padding: 5px 5px;
+}
+
+span{
+    text-align: center;
+    
+}
+/* Footer section */
+footer{
+    color: white;
+    font-size: 20px;
+    background-color: black;
+}
+
+
+                                    /* Class attributes */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+
+}
+.center {
+    text-align: center;
+}
+.check{
+    color: rgb(255, 102, 0);
+}
+
+@keyframes A1{
+    from{
+        width: 130px;
+    }
+    to{
+        width: 300px;
+    }
+}
+
+
+@font-face {
+    font-family: 'Genericons';
+    src:url('fonts/genericons-regular-webfont.woff')format('woff'),url('fonts/genericons-regular-webfont.eot')format('truetype')
+}
+
+.container{
+    margin: 50px auto;
+    width: 90%;
+}
+
+header h1{
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.accordion{
+    background-color: #333;
+    width: 100%;
+    min-width: 800px;
+    display: block;
+    list-style-type: none;
+    overflow: hidden;
+    height: 200px;
+    font-size: 0;
+}
+
+.tab{
+    display: inline-block;
+    background-color: #444;
+    border-right: 1px solid rgb(12, 41, 20);
+    width: 80px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease-in-out 0.1s;
+
+}
+
+.tab:hover{
+    width: 450px;
+} 
+
+.tab .content{
+    background-color: white;
+    width: 370px  ;
+    height: 200px;
+    margin-left: 80px;
+    position: relative;
+    padding: 50px 0 0 15px;
+}
+.tab .content h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.tab .content p{
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    padding-right: 30px;
+}
+.tab:hover .social a:before{
+    margin-left: -100px;
+}
+.tab:hover .social a:after{
+    margin-left: -1px;
+}
+
+.social a:before , 
+.social a:after{
+    transition: all 0.4s ease-in-out 0.1s;
+    width: 80px;
+    height: 200px;
+    position: absolute;
+    text-indent: 0;
+    padding-top: 90px;
+    padding-left: 25px;
+    display: block;
+    font: normal 30px Genericons;
+    color: white;
+}
+
+.social a:after{
+    font-size: 40px;
+    padding-top: 80px;
+    padding-left: 20px;
+    margin-left: 80px;
+}
+
+/* Add Icons */
+
+.youtube a:before , 
+.youtube a:after{
+    content: '\f213';
+}
+.youtube a:after{
+    background-color: red;
+}
+
+
+.twitter a:before , 
+.twitter a:after{
+    content: '\f202';
+}
+.twitter a:after{
+    background-color: rgb(60, 194, 218);
+}
+
+
+
+.facebook a:before , 
+.facebook a:after{
+    content: '\f204';
+}
+.facebook a:after{
+    background-color: rgb(66, 66, 245);
+}
+
+
+
+.linkedin a:before , 
+.linkedin a:after{
+    content: '\f208';
+}
+.linkedin a:after{
+    background-color: rgb(78, 145, 223);
+}
+
+
+
+.instagram a:before , 
+.instagram a:after{
+    content: '\f215';
+}
+.instagram a:after{
+    background-color: #8a3ab9;
+}
+
+
+
+.github a:before , 
+.github a:after{
+    content: '\f200';
+}
+.github a:after{
+    background-color: #6e5494;
+}
+
